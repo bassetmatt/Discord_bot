@@ -1,6 +1,7 @@
 from discord.ext import commands
 import math
 
+#Imports from other files
 from youtube import *
 from discord_part import *
 
@@ -42,6 +43,7 @@ Commands syntax is `!command`, i.e. `!play`
 \t -`volume [v]` ( 0 <= v <= 100) 
 \t Sets the volume of the bot
 """
+
 class Music(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot

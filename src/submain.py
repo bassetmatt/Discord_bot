@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 #Discord library
 from discord.ext import commands
 
-# Classes and functions imported from files
+#Imports from other files
 from youtube import *
 from music import *
 
