@@ -54,7 +54,6 @@ class Music(commands.Cog):
         if not state:
             state = VoiceState(self.bot, ctx)
             self.voice_states[ctx.guild.id] = state
-
         return state
 
     def cog_unload(self):
@@ -65,7 +64,6 @@ class Music(commands.Cog):
         if not ctx.guild:
             raise commands.NoPrivateMessage(
                 'This command can\'t be used in DM channels.')
-
         return True
 
     async def cog_before_invoke(self, ctx: commands.Context):
@@ -81,24 +79,6 @@ class Music(commands.Cog):
         destination = ctx.author.voice.channel
         if ctx.voice_state.voice:
             await ctx.send('Sup\' bitches, I\'m in {}'.format(destination))
-            await ctx.voice_state.voice.move_to(destination)
-            return
-
-        ctx.voice_state.voice = await destination.connect()
-
-    @commands.command(name='summon')
-    @commands.has_permissions(manage_guild=True)
-    async def _summon(self, ctx: commands.Context, *, channel: discord.VoiceChannel = None):
-        """Summons the bot to a voice channel.
-        If no channel was specified, it joins your channel.
-        """
-
-        if not channel and not ctx.author.voice:
-            raise VoiceError(
-                'You are neither connected to a voice channel nor specified a channel to join.')
-
-        destination = channel or ctx.author.voice.channel
-        if ctx.voice_state.voice:
             await ctx.voice_state.voice.move_to(destination)
             return
 
