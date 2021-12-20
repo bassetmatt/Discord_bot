@@ -2,8 +2,8 @@ from discord.ext import commands
 import math
 
 #Imports from other files
-from youtube import *
-from discord_part import *
+from src.youtube import *
+from src.voice import *
 
 help_str = """**List of the commands : **
 Commands syntax is `!command`, i.e. `!play`

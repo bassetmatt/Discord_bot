@@ -1,12 +1,15 @@
+#Discord library
 import discord
+from discord.ext import commands
+
+
 import youtube_dl
 import asyncio
 import functools
 
 
-from discord.ext import commands
 
-
+#Library to get file path
 import pathlib
 FFMPEG_PATH = pathlib.Path().resolve() / "lib"/ "ffmpeg.exe"
 

@@ -6,8 +6,8 @@ import asyncio
 from async_timeout import timeout
 
 #Imports from other files
-from youtube import *
-from tools import *
+from src.youtube import *
+from src.tools import *
 class VoiceState:
     def __init__(self, bot: commands.Bot, ctx: commands.Context):
         self.bot = bot

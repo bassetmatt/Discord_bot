@@ -7,7 +7,7 @@ import itertools
 import asyncio
 
 #Imports from other files
-from youtube import *
+from src.youtube import *
 
 class Song:
     __slots__ = ('source', 'requester')

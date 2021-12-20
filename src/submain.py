@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 from discord.ext import commands
 
 #Imports from other files
-from youtube import *
-from music import *
+from src.youtube import *
+from src.music import *
 
 def main() :
     #Loads the environment variables
