@@ -1,7 +1,7 @@
 #Discord library
 import discord
 
-#Utilitry
+#Utiliatry
 import random
 import itertools
 import asyncio
@@ -31,6 +31,8 @@ class Song:
 
 
 class SongQueue(asyncio.Queue):
+    """A class that manages song queues, extends the queue class from asyncio
+    """
     def __getitem__(self, item):
         if isinstance(item, slice):
             return list(itertools.islice(self._queue, item.start, item.stop, item.step))
@@ -41,13 +43,27 @@ class SongQueue(asyncio.Queue):
         return self._queue.__iter__()
 
     def __len__(self):
+        """Gets the length of the queue
+
+        Returns:
+            int: The size
+        """
         return self.qsize()
 
     def clear(self):
+        """Clears the queue
+        """
         self._queue.clear()
 
     def shuffle(self):
+        """Shuffles the queue
+        """
         random.shuffle(self._queue)
 
     def remove(self, index: int):
+        """Removes an element at the given index
+
+        Args:
+            index (int): The index of the item to be removed
+        """
         del self._queue[index]

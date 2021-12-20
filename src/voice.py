@@ -1,10 +1,7 @@
 #Discord library
-import discord
 from discord.ext import commands
 
-#Utilitry
-import random
-import itertools
+#Utiliatry
 import asyncio
 from async_timeout import timeout
 
