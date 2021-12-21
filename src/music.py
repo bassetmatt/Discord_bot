@@ -104,7 +104,7 @@ class Music(commands.Cog):
 
         ctx.voice_state.voice = await destination.connect()
 
-    @commands.command(name='leave', aliases=['disconnect', 'die'])
+    @commands.command(name='leave', aliases=['disconnect', 'die', 'fix'])
     @commands.has_permissions(manage_guild=True)
     async def _leave(self, ctx: commands.Context):
         """Clears the queue and leaves the voice channel."""
@@ -167,7 +167,7 @@ class Music(commands.Cog):
             await ctx.message.add_reaction('⏹')
             await ctx.send('Kirā kuīn wa sudeni kyū ni sawatte iru')
 
-    @commands.command(name='skip')
+    @commands.command(name='skip', aliases=['next'])
     async def _skip(self, ctx: commands.Context):
         """Vote to skip a song. The requester can automatically skip.
         3 skip votes are needed for the song to be skipped.
