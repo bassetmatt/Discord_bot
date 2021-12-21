@@ -186,7 +186,7 @@ class Music(commands.Cog):
         elif voter.id not in ctx.voice_state.skip_votes:
             ctx.voice_state.skip_votes.add(voter.id)
             total_votes = len(ctx.voice_state.skip_votes)
-            min_votes = (len(ctx.voice_client.channel.members) - 1) // 2
+            min_votes = (len(ctx.voice_client.channel.members) - 1) // 2 + 1
 
             if total_votes >= min_votes:
                 await ctx.message.add_reaction('⏭')
@@ -198,7 +198,7 @@ class Music(commands.Cog):
         else:
             await ctx.send('You have already voted to skip this song.')
 
-    @commands.command(name='queue')
+    @commands.command(name='queue', aliases=['list'])
     async def _queue(self, ctx: commands.Context, *, page: int = 1):
         """Shows the player's queue.
         You can optionally specify the page to show. Each page contains 10 elements.
