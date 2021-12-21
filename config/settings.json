@@ -1,0 +1,8 @@
+{
+    "pause command": "pause", 
+    "pause aliases": [
+        "stop", 
+        "zawarudo"],
+    "pause emoji" : "😧",
+    "pause message" : "ZA WARUDO !! TOKI WO TOMARE !!"
+}

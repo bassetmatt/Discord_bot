@@ -7,11 +7,8 @@ import youtube_dl
 import asyncio
 import functools
 
-
-
-#Library to get file path
-import pathlib
-FFMPEG_PATH = pathlib.Path().resolve() / "lib"/ "ffmpeg.exe"
+#Path to the ffmpeg exectutable file
+FFMPEG_PATH = "lib/ffmpeg.exe"
 
 
 # Silence useless bug reports messages
