@@ -297,3 +297,16 @@ class Music(commands.Cog):
             if ctx.voice_client.channel != ctx.author.voice.channel and not ctx.author.guild_permissions.administrator:
                 raise commands.CommandError(
                     'Bot is already in a voice channel.')
+
+
+    @commands.command(name='bedwars', aliases=['bedowaru', 'hypixel', 'BW', 'Bedwars', 'BedWars', 'bw'])
+    @commands.has_permissions(manage_guild=True)
+    async def _leave(self, ctx: commands.Context):
+        """Clears the queue and leaves the voice channel."""
+        ligne = random.choice(['ramenez votre cul, on fait des bedwars',
+                                'c\'est l\'heure des bedwars',
+                                'go bedowaru',
+                                'venez on fait un bedwars',
+                                'on part sur Hypixel'])
+        general_channel = self.bot.get_channel(690524800799735848)
+        await general_channel.send('<@&860190155973459989> ' + ligne)

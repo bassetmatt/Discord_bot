@@ -6,7 +6,7 @@ from discord.ext import commands
 
 #Imports from other files
 from src.youtube import *
-from src.music import *
+from src.bot_commands import *
 
 def main() :
     #Loads the environment variables
