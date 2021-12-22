@@ -12,7 +12,6 @@ def main() :
     #Loads the environment variables
     load_dotenv()
     DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
-    COMMAND_SYMBOL = os.getenv("COMMAND_SYMBOL")
     
     #Bot setup
     bot = commands.Bot(COMMAND_SYMBOL, description='Yet another music bot.')

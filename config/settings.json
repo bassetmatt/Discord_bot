@@ -1,8 +1,15 @@
 {
-    "pause command": "pause", 
-    "pause aliases": [
-        "stop", 
-        "zawarudo"],
-    "pause emoji" : "😧",
-    "pause message" : "ZA WARUDO !! TOKI WO TOMARE !!"
+	// Command prefix :
+	"command prefix" : "!",
+	//Pause options
+
+	"pause command": "pause", 
+	"pause aliases": [
+		"stop", 
+		"zawarudo"],
+	"pause emoji" : "😧",
+	"pause message" : "ZA WARUDO !! TOKI WO TOMARE !!"
+
+	//
+
 }
