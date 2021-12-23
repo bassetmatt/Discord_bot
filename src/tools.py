@@ -1,13 +1,33 @@
 #Discord library
 import discord
+from discord.ext import commands
 
 #Utiliatry
 import random
 import itertools
 import asyncio
+from src.command_names import CommandFields
 
 #Imports from other files
 from src.youtube import *
+
+async def sendMessage(ctx: commands.Context, *messages,**f) :
+    for msg in messages :
+        await ctx.send(msg.format(**f))
+
+async def addReaction(ctx: commands.Context, *reactions) :
+    for reac in reactions :
+        await ctx.message.add_reaction(reac)
+
+async def cmdEffect(ctx,cmd: CommandFields,**details) :
+    void = ["",[],[""]]
+    if cmd.msg   not in void :
+        if type(cmd.msg) == list :
+            await sendMessage(ctx, *cmd.msg,**details)
+        else :
+            await sendMessage(ctx, cmd.msg,**details)
+    if cmd.emoji not in void :
+        await addReaction(ctx, *cmd.emoji)
 
 class Song:
     __slots__ = ('source', 'requester')

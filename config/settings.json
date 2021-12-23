@@ -1,15 +1,120 @@
 {
 	// Command prefix :
 	"command prefix" : "!",
-	//Pause options
 
-	"pause command": "pause", 
-	"pause aliases": [
+	// Playlist support : yes/no
+	"playlist" : "no",
+
+	// Join
+	"join emoji"   : ["🇱","🇪","🇹","🇿","🇬","🇴"],
+	"join message" : "Sup' bitches, I'm in {destination}",
+	"join command" : "join", 
+	"join aliases" : [
+		"come"
+	],
+
+	//Leave
+	"leave emoji"   : ["👋"],
+	"leave message" : "",
+	"leave command" : "leave", 
+	"leave aliases" : [
+		"disconnect",
+		"die",
+		"fix"
+	],
+
+	//Volume
+	"volume emoji"   : "",
+	"volume message" : ["Volume of the player set to {volume}%"],
+	"volume command" : "volume", 
+	"volume aliases" : [
+		
+	],
+
+	// Now
+	"now emoji"   : "",
+	"now message" : "",
+	"now command" : "now", 
+	"now aliases" : [
+		"current",
+		"playing"
+	],
+
+	// Pause 
+	"pause emoji"   : ["⏸"],
+	"pause message" : "ZA WARUDO !! TOKI WO TOMARE !!",
+	"pause command" : "pause", 
+	"pause aliases" : [
 		"stop", 
-		"zawarudo"],
-	"pause emoji" : "😧",
-	"pause message" : "ZA WARUDO !! TOKI WO TOMARE !!"
+		"zawarudo"
+	],
 
-	//
+	// Resume
+	"resume emoji"   : "⏯",
+	"resume message" : "Toki wa ugoki dasu.",
+	"resume command" : "resume", 
+	"resume aliases" : [
+		"restart", 
+		"continue"
+	],
+
+	// Clear
+	"clear emoji"   : ["⏹"],
+	"clear message" : "Kirā kuīn wa sudeni kyū ni sawatte iru",
+	"clear command" : "clear", 
+	"clear aliases" : [
+		
+	],
+
+	// Skip
+	"skip emoji"   : ["⏭"],
+	"skip message" : "Jikan wa futtobashita",
+	//other : 😧
+	"skip command" : "skip", 
+	"skip aliases" : [
+		"pass"
+	],
+
+	// Queue
+	"queue emoji"   : "",
+	"queue message" : "",
+	"queue command" : "queue", 
+	"queue aliases" : [
+		"list"
+	],
+
+	// Shuffle 
+	"shuffle emoji"   : ["🔀"],
+	"shuffle message" : "List successfully sorted with bogo sort",
+	"shuffle command" : "shuffle", 
+	"shuffle aliases" : [
+		"random"
+	],
+
+	// Remove
+	"remove emoji"   : ["❌"],
+	"remove message" : "Target successfully eliminated 🔫",
+	"remove command" : "remove", 
+	"remove aliases" : [
+		"pop",
+		"del"
+	],
+
+	// Loop
+	"loop emoji"   : ["🔁"],
+	"loop message" : "Kore ga... Requiem... da.",
+	"loop command" : "loop", 
+	"loop aliases" : [
+		"requiem"
+	],
+
+	// Play 
+	"play emoji"   : "",
+	"play message" : "Enqueued {source}",
+	"play command" : "play", 
+	"play aliases" : [
+		"sing",
+		"add"
+	]
 
 }
